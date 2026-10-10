@@ -1,0 +1,594 @@
+// Fortnite Emotes & Dances - phrases for the C++ Metamod port.
+//
+// Source: resources/translations/en.jsonc + ru.jsonc (SwiftlyS2 port v1.1.8), which carry the keys
+// of the official v1.1.8 lang/en.json + lang/ru.json. Two port-only keys were added:
+// "emote.stoppedbyapi" (shared API cancel) and the "emote.player.*" variants of the checks.
+//
+// Colour tags: the original CounterStrikeSharp plugin used "{color}" tags, the SwiftlyS2 port
+// converted them to "[color]" (Swiftly's chat formatter). This file uses the original "{color}"
+// syntax; map the tag names to whatever the C++ chat printer expects.
+// Tag mapping: {green} {default} {lime} {lightred}; placeholders are positional {0}, {1}.
+//
+// Keys whose name is an emote/dance name (DanceMoves, ElectroShuffle, Emote_*) are the
+// menu / display names used by the emote lookup. Emote_BoogieDown and Emote_HeelClick have
+// translations but no entry in the default emotes.jsonc (leftover from the official release).
+//
+"Phrases"
+{
+	"emote.prefix"
+	{
+		"en"	"{green}CR-Emotes{default}"
+		"ru"	"{green}CR-Emotes{default}"
+	}
+	"emote.command.help"
+	{
+		"en"	"Expected Usage: {lime}!{0} {1}"
+		"ru"	"Ожидаемое использование: {lime}!{0} {1}"
+	}
+	"emote.command.no-permission"
+	{
+		"en"	"{lightred}You do not have permission to use this command."
+		"ru"	"{lightred}У вас нет прав для использования этой команды."
+	}
+	"emote.command.server-only"
+	{
+		"en"	"{lightred}This command can only be used by the server."
+		"ru"	"{lightred}Эту команду можно использовать только на сервере."
+	}
+	"emote.command.client-only"
+	{
+		"en"	"{lightred}This command can only be used by clients."
+		"ru"	"{lightred}Эту команду можно использовать только на клиенте."
+	}
+	"emote.emotemenutitle"
+	{
+		"en"	"Emote Menu"
+		"ru"	"Меню эмоций"
+	}
+	"emote.dancemenutitle"
+	{
+		"en"	"Dance Menu"
+		"ru"	"Меню танцев"
+	}
+	"emote.setemote-usage"
+	{
+		"en"	"Usage: {lime}!{0} target/#userid <emoteName>"
+		"ru"	"Использование: {lime}!{0} цель/#userid <названиеЭмоции>"
+	}
+	"emote.setdance-usage"
+	{
+		"en"	"Usage: {lime}!{0} target/#userid <danceName>"
+		"ru"	"Использование: {lime}!{0} цель/#userid <названиеТанца>"
+	}
+	"emote.target-not-found"
+	{
+		"en"	"{lightred}No targets found."
+		"ru"	"{lightred}Цель не найдена."
+	}
+	"emote.played-emote-on-target"
+	{
+		"en"	"{lime}Successfully played emote on {green}{0}{lime} players."
+		"ru"	"{lime}Эмоция успешно проиграна на {green}{0}{lime} игроках."
+	}
+	"emote.failplayed-emote-on-target"
+	{
+		"en"	"{lightred}Failed to play emote on any players."
+		"ru"	"{lightred}Не удалось проиграть эмоцию на любом игроке."
+	}
+	"emote.played-dance-on-target"
+	{
+		"en"	"{lime}Successfully played dance on {green}{0}{lime} players."
+		"ru"	"{lime}Танец успешно проигран на {green}{0}{lime} игроках."
+	}
+	"emote.failplayed-dance-on-target"
+	{
+		"en"	"{lightred}Failed to play dance on any players."
+		"ru"	"{lightred}Не удалось проиграть танец на любом игроке."
+	}
+	"emote.alivecheck"
+	{
+		"en"	"{lightred}You need to be alive to use this command."
+		"ru"	"{lightred}Вы должны быть живы для использования этой команды."
+	}
+	"emote.player.alivecheck"
+	{
+		"en"	"{lightred}Target needs to be alive to use this emote."
+		"ru"	"{lightred}Цель должна быть жива для использования этой эмоции."
+	}
+	"emote.scopecheck"
+	{
+		"en"	"{lightred}You can't use this command while scoping."
+		"ru"	"{lightred}Вы не можете использовать эту команду при прицеливании."
+	}
+	"emote.player.scopecheck"
+	{
+		"en"	"{lightred}Target can't use this emote while scoping."
+		"ru"	"{lightred}Цель не может использовать эту эмоцию при прицеливании."
+	}
+	"emote.cooldowncheck"
+	{
+		"en"	"You need to wait {lightred}{0} seconds{default} before using this command again."
+		"ru"	"Необходимо подождать {lightred}{0} секунд{default} перед повторным использованием команды."
+	}
+	"emote.groundcheck"
+	{
+		"en"	"{lightred}You need to be on the ground to use this command."
+		"ru"	"{lightred}Вы должны находиться на земле для использования этой команды."
+	}
+	"emote.duckcheck"
+	{
+		"en"	"{lightred}You need to be standing to use this command."
+		"ru"	"{lightred}Вы должны стоять для использования этой команды."
+	}
+	"emote.disabledbyadmin"
+	{
+		"en"	"{lightred}Admin has disabled emotes/dances."
+		"ru"	"{lightred}Администратор отключил эмоции/танцы."
+	}
+	"emote.player.groundcheck"
+	{
+		"en"	"{lightred}Target needs to be on the ground to use this emote."
+		"ru"	"{lightred}Цель должна находиться на земле для использования этой эмоции."
+	}
+	"emote.player.duckcheck"
+	{
+		"en"	"{lightred}Target needs to be standing to use this emote."
+		"ru"	"{lightred}Цель должна стоять для использования этой эмоции."
+	}
+	"emote.player.disabledbyadmin"
+	{
+		"en"	"{lightred}Admin has disabled emotes/dances."
+		"ru"	"{lightred}Администратор отключил эмоции/танцы."
+	}
+	"emote.unknownerror"
+	{
+		"en"	"{lightred}An unknown error occurred. Please try again later."
+		"ru"	"{lightred}Произошла неизвестная ошибка. Попробуйте позже."
+	}
+	"emote.no-access"
+	{
+		"en"	"{lightred}You do not have access to this emote."
+		"ru"	"{lightred}У вас нет доступа к этой эмоции."
+	}
+	"emote.not-found"
+	{
+		"en"	"{lightred}Unable to find emote with that name."
+		"ru"	"{lightred}Не удалось найти эмоцию с таким названием."
+	}
+	"emote.playing"
+	{
+		"en"	"Playing {lime}{0}{default}."
+		"ru"	"Проигрывается {lime}{0}{default}."
+	}
+	"emote.list-chat-triggers"
+	{
+		"en"	"Here is a list of chat triggers for emotes/dances."
+		"ru"	"Вот список чат-триггеров для эмоций/танцев."
+	}
+	"emote.notallowed.warmupftcheck"
+	{
+		"en"	"{lightred}You can only use this command in warmup or freezetime."
+		"ru"	"{lightred}Эту команду можно использовать только в разминке или во время заморозки."
+	}
+	"emote.notallowed.warmupftrecheck"
+	{
+		"en"	"{lightred}You can only use this command in warmup / freezetime / round-end."
+		"ru"	"{lightred}Эту команду можно использовать только в разминке/заморозке/в конце раунда."
+	}
+	"emote.stoppedbyapi"
+	{
+		"en"	"{lightred}An external plugin stopped this emote."
+		"ru"	"{lightred}Внешний плагин остановил эту эмоцию."
+	}
+
+	"DanceMoves"
+	{
+		"en"	"Dance Moves"
+		"ru"	"Dance Moves"
+	}
+	"ElectroShuffle"
+	{
+		"en"	"Electro Shuffle"
+		"ru"	"Electro Shuffle"
+	}
+	"Emote_AerobicChamp"
+	{
+		"en"	"Aerobic"
+		"ru"	"Aerobic"
+	}
+	"Emote_Bendy"
+	{
+		"en"	"Bendy"
+		"ru"	"Bendy"
+	}
+	"Emote_BandOfTheFort"
+	{
+		"en"	"Best Mates"
+		"ru"	"Best Mates"
+	}
+	"Emote_BlowKiss"
+	{
+		"en"	"Blow Kiss"
+		"ru"	"Blow Kiss"
+	}
+	"Emote_BoogieDown"
+	{
+		"en"	"Boogie Down"
+		"ru"	"Boogie Down"
+	}
+	"Emote_Bring_It_On"
+	{
+		"en"	"Come To Me"
+		"ru"	"Come To Me"
+	}
+	"Emote_Calculated"
+	{
+		"en"	"Calculated"
+		"ru"	"Calculated"
+	}
+	"Emote_Capoeira"
+	{
+		"en"	"Capoeira"
+		"ru"	"Capoeira"
+	}
+	"Emote_Celebration"
+	{
+		"en"	"Celebration"
+		"ru"	"Celebration"
+	}
+	"Emote_Charleston"
+	{
+		"en"	"Flapper"
+		"ru"	"Flapper"
+	}
+	"Emote_Chicken"
+	{
+		"en"	"Chicken"
+		"ru"	"Chicken"
+	}
+	"Emote_Confused"
+	{
+		"en"	"Confused"
+		"ru"	"Confused"
+	}
+	"Emote_Chug"
+	{
+		"en"	"Chug"
+		"ru"	"Chug"
+	}
+	"Emote_Cry"
+	{
+		"en"	"Cry"
+		"ru"	"Cry"
+	}
+	"Emote_Dab"
+	{
+		"en"	"Dab"
+		"ru"	"Dab"
+	}
+	"Emote_Dance_Breakdance"
+	{
+		"en"	"Break Dance"
+		"ru"	"Break Dance"
+	}
+	"Emote_Dance_Disco_T3"
+	{
+		"en"	"Disco Fever"
+		"ru"	"Disco Fever"
+	}
+	"Emote_Dance_Loser"
+	{
+		"en"	"Take The L"
+		"ru"	"Take The L"
+	}
+	"Emote_Dance_NoBones"
+	{
+		"en"	"Boneless"
+		"ru"	"Boneless"
+	}
+	"Emote_Dance_Pump"
+	{
+		"en"	"Pump"
+		"ru"	"Pump"
+	}
+	"Emote_Dance_RideThePony"
+	{
+		"en"	"Ride The Pony"
+		"ru"	"Ride The Pony"
+	}
+	"Emote_Dance_Shoot"
+	{
+		"en"	"Hype"
+		"ru"	"Hype"
+	}
+	"Emote_Dance_SwipeIt"
+	{
+		"en"	"Shake It Up"
+		"ru"	"Shake It Up"
+	}
+	"Emote_DG_Disco"
+	{
+		"en"	"Disco Fever 2"
+		"ru"	"Disco Fever 2"
+	}
+	"Emote_Dance_Worm"
+	{
+		"en"	"The Worm"
+		"ru"	"The Worm"
+	}
+	"Emote_DustingOffHands"
+	{
+		"en"	"Band of the Fort"
+		"ru"	"Band of the Fort"
+	}
+	"Emote_DustOffShoulders"
+	{
+		"en"	"Shake It Up 2"
+		"ru"	"Shake It Up 2"
+	}
+	"Emote_EasternBloc"
+	{
+		"en"	"Eastern Bloc"
+		"ru"	"Eastern Bloc"
+	}
+	"Emote_Facepalm"
+	{
+		"en"	"Facepalm"
+		"ru"	"Facepalm"
+	}
+	"Emote_FancyFeet"
+	{
+		"en"	"Dream Feet"
+		"ru"	"Dream Feet"
+	}
+	"Emote_Fishing"
+	{
+		"en"	"On the Hook"
+		"ru"	"On the Hook"
+	}
+	"Emote_Flex"
+	{
+		"en"	"Flex"
+		"ru"	"Flex"
+	}
+	"Emote_FlippnSexy"
+	{
+		"en"	"Flippn"
+		"ru"	"Flippn"
+	}
+	"Emote_FlossDance"
+	{
+		"en"	"Floss"
+		"ru"	"Floss"
+	}
+	"Emote_Fonzie_Pistol"
+	{
+		"en"	"Finger Guns"
+		"ru"	"Finger Guns"
+	}
+	"Emote_Fresh"
+	{
+		"en"	"Fresh"
+		"ru"	"Fresh"
+	}
+	"Emote_golfclap"
+	{
+		"en"	"Golf Clap"
+		"ru"	"Golf Clap"
+	}
+	"Emote_GrooveJam"
+	{
+		"en"	"Groove Jam"
+		"ru"	"Groove Jam"
+	}
+	"Emote_guitar"
+	{
+		"en"	"Guitar"
+		"ru"	"Guitar"
+	}
+	"Emote_HandSignals"
+	{
+		"en"	"Hand Signals"
+		"ru"	"Hand Signals"
+	}
+	"Emote_HeelClick"
+	{
+		"en"	"Click!"
+		"ru"	"Click!"
+	}
+	"Emote_Hillbilly_Shuffle"
+	{
+		"en"	"Shuffle"
+		"ru"	"Shuffle"
+	}
+	"Emote_Hip_Hop"
+	{
+		"en"	"Hip Hop"
+		"ru"	"Hip Hop"
+	}
+	"Emote_Hula"
+	{
+		"en"	"Hula Hop"
+		"ru"	"Hula Hop"
+	}
+	"Emote_Hotstuff"
+	{
+		"en"	"Hot Stuff"
+		"ru"	"Hot Stuff"
+	}
+	"Emote_IBreakYou"
+	{
+		"en"	"Breaking Point"
+		"ru"	"Breaking Point"
+	}
+	"Emote_IHeartYou"
+	{
+		"en"	"True Love"
+		"ru"	"True Love"
+	}
+	"Emote_InfiniDab"
+	{
+		"en"	"Infinite Dab"
+		"ru"	"Infinite Dab"
+	}
+	"Emote_Intensity"
+	{
+		"en"	"Intensity"
+		"ru"	"Intensity"
+	}
+	"Emote_IrishJig"
+	{
+		"en"	"Turkish Dabke"
+		"ru"	"Turkish Dabke"
+	}
+	"Emote_KoreanEagle"
+	{
+		"en"	"Eagle"
+		"ru"	"Eagle"
+	}
+	"Emote_Kpop"
+	{
+		"en"	"True Heart"
+		"ru"	"True Heart"
+	}
+	"Emote_Laugh"
+	{
+		"en"	"Laugh"
+		"ru"	"Laugh"
+	}
+	"Emote_LivingLarge"
+	{
+		"en"	"Living Large"
+		"ru"	"Living Large"
+	}
+	"Emote_Luchador"
+	{
+		"en"	"Luchador"
+		"ru"	"Luchador"
+	}
+	"Emote_Make_It_Rain"
+	{
+		"en"	"Make It Rain"
+		"ru"	"Make It Rain"
+	}
+	"Emote_Maracas"
+	{
+		"en"	"Maracas"
+		"ru"	"Maracas"
+	}
+	"Emote_Mask_Off"
+	{
+		"en"	"Orange Justice"
+		"ru"	"Orange Justice"
+	}
+	"Emote_NotToday"
+	{
+		"en"	"Not Today"
+		"ru"	"Not Today"
+	}
+	"Emote_PopLock"
+	{
+		"en"	"Pop Lock"
+		"ru"	"Pop Lock"
+	}
+	"Emote_PopRock"
+	{
+		"en"	"Star Power"
+		"ru"	"Star Power"
+	}
+	"Emote_RobotDance"
+	{
+		"en"	"Robot"
+		"ru"	"Robot"
+	}
+	"Emote_RockPaperScissor_Rock"
+	{
+		"en"	"Rock"
+		"ru"	"Rock"
+	}
+	"Emote_RockPaperScissor_Paper"
+	{
+		"en"	"Paper"
+		"ru"	"Paper"
+	}
+	"Emote_RockPaperScissor_Scissor"
+	{
+		"en"	"Scissors"
+		"ru"	"Scissors"
+	}
+	"Emote_Salt"
+	{
+		"en"	"Salt"
+		"ru"	"Salt"
+	}
+	"Emote_Salute"
+	{
+		"en"	"Salute"
+		"ru"	"Salute"
+	}
+	"Emote_SmoothDrive"
+	{
+		"en"	"Drive Car"
+		"ru"	"Drive Car"
+	}
+	"Emote_Snap"
+	{
+		"en"	"Snap"
+		"ru"	"Snap"
+	}
+	"Emote_StageBow"
+	{
+		"en"	"Stage Bow"
+		"ru"	"Stage Bow"
+	}
+	"Emote_TechnoZombie"
+	{
+		"en"	"Reanimated"
+		"ru"	"Reanimated"
+	}
+	"Emote_ThumbsDown"
+	{
+		"en"	"Thumbs Down"
+		"ru"	"Thumbs Down"
+	}
+	"Emote_ThumbsUp"
+	{
+		"en"	"Thumbs Up"
+		"ru"	"Thumbs Up"
+	}
+	"Emote_Twist"
+	{
+		"en"	"Twist"
+		"ru"	"Twist"
+	}
+	"Emote_WarehouseDance"
+	{
+		"en"	"Ware House"
+		"ru"	"Ware House"
+	}
+	"Emote_Wave"
+	{
+		"en"	"Wave"
+		"ru"	"Wave"
+	}
+	"Emote_Wiggle"
+	{
+		"en"	"Wiggle"
+		"ru"	"Wiggle"
+	}
+	"Emote_Yeet"
+	{
+		"en"	"Yeet"
+		"ru"	"Yeet"
+	}
+	"Emote_Youre_Awesome"
+	{
+		"en"	"You're Awesome"
+		"ru"	"You're Awesome"
+	}
+	"Emote_Zippy_Dance"
+	{
+		"en"	"Rambunctious"
+		"ru"	"Rambunctious"
+	}
+}
