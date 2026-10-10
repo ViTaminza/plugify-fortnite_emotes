@@ -1,0 +1,34 @@
+{
+	"$schema": "https://raw.githubusercontent.com/untrustedmodders/plugify/refs/heads/main/schemas/plugin.schema.json",
+	"version": "${FORTNITE_EMOTES_VERSION}",
+	"name": "fortnite_emotes",
+	"description": "Fortnite emotes & dances (a port of the SwiftlyS2 plugin FortniteEmotesS2 via the Metamod:Source port cs2-fortnite_emotes): '!emote' / '!dance' (plus '!setemote' / '!setdance' for admins) and the emote menu play an animation on an invisible rig prop that a visible clone of the player follows, with a third-person camera, hidden weapons/gloves for the duration and an optional sound loop. Access lists support 'vip' / 'vip:<feature>' through the vip plugin and admin permissions through admin_system; the emote list is configs/fortnite_emotes/emotes.ini, settings are configs/fortnite_emotes/settings.ini (the live server uses workshop addon 3328582199 for the models and sounds) and the texts come from translations/fortnite_emotes.phrases.txt. Chat triggers (single words from the config) and the console commands mm_emote/mm_dance/mm_setemote/mm_setdance work as in the original. No exported methods.",
+	"author": "Cruze (original), ezekutor, Metamod port; ported to Plugify",
+	"website": "https://github.com/untrustedmodders/plugify",
+	"license": "GPL-3.0",
+	"entry": "bin/fortnite_emotes",
+	"platforms": [],
+	"language": "cpp",
+	"dependencies": [
+		{
+			"name": "s2sdk",
+			"constraints": ">=2.18.2"
+		},
+		{
+			"name": "admin_system",
+			"constraints": ">=1.0.0",
+			"optional": true
+		},
+		{
+			"name": "vip",
+			"constraints": ">=1.0.0",
+			"optional": true
+		},
+		{
+			"name": "hudmenu",
+			"constraints": ">=1.0.0",
+			"optional": true
+		}
+	],
+	"methods": []
+}
